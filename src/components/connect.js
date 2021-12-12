@@ -3,10 +3,10 @@ import React from 'react'
 const Connect = ({children}) => (
   <p><span
     style={{
-      backgroundColor: '#25c2a0',
+      backgroundColor: '#737ADE',
       borderRadius: '20px',
       color: '#fff',
-      padding: '10px',
+      padding: '10px 20px',
       cursor: 'pointer',
     }}
     onClick={() => {
