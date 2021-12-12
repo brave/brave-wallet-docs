@@ -28,3 +28,7 @@ Permissions can be revoked in brave://settings/content/ethereum
 A user can also open up the wallet panel and disconnect a connected site when they are on that site.
 
 If a wallet is not yet setup and a page requests permissions, we will open brave://wallet for the user to setup the wallet.
+
+# Brave logos
+
+<a href='https://brave.com/static-assets/files/Brave-Logo-Package.zip'>Download Brave logo package</a>

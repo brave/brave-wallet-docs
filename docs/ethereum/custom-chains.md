@@ -7,10 +7,10 @@ sidebar_position: 3
 export const Add = ({children, chainId, decimals, symbol, chainName, rpcUrl, blockExplorerUrl}) => (
   <span
     style={{
-      backgroundColor: '#25c2a0',
+      backgroundColor: '#737ADE',
       borderRadius: '20px',
       color: '#fff',
-      padding: '10px',
+      padding: '10px 20px',
       cursor: 'pointer',
     }}
     onClick={() => {
