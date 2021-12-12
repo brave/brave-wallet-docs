@@ -6,6 +6,8 @@ sidebar_position: 2
 
 ## `ethereum.request`
 
+`ethereum.request` is used to submit an RPC request to the remote EVM node.  For some methods, the provider itself handles the response.
+
 ```ts
 interface RequestArguments {
   readonly method: string;
@@ -15,7 +17,13 @@ interface RequestArguments {
 Provider.request(args: RequestArguments): Promise<unknown>;
 ```
 
+The promise either resolves with a response object, or rejects with an [error](errors).
+
 ## `ethereum.isConnected`
+
+Returns true if the page is connected to the RPC networks and is able to make RPC requests.
+
+This method is not related to accounts and if an account has permission for the current page. For that you'd want to use `eth_accounts` to see if an account has permission or `eth_requestAccounts` to ask for permission if permission aren't currently granted.
 
 ```ts
 Provider.isConnected(): boolean;

@@ -36,3 +36,7 @@ Since this property is deprecated, this property is provided for webcompat reaso
 This API is deprecated but is available in Brave Wallet.
 
 :::
+
+## `ethereum.isMetaMask`
+
+Even though there is no shared code with MetaMask, several dapps have become dependent on this property so `true` is returned for this value.

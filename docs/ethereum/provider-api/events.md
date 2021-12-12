@@ -17,13 +17,15 @@ interface ProviderConnectInfo {
 }
 ```
 
+```ts
 Provider.on('connect', listener: (connectInfo: ProviderConnectInfo) => void): Provider;
+```
 
 ## `disconnect`
 
 The Provider emits disconnect when it becomes disconnected from all chains.
 
-```
+```ts
 Provider.on('disconnect', listener: (error: ProviderRpcError) => void): Provider;
 ```
 
