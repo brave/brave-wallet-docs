@@ -24,3 +24,5 @@ async function addEthereumChain() {
 }
 console.log(await addEthereumChain());
 ```
+
+After a chain is added, a switch request is shown to the user to switch to that site as well.

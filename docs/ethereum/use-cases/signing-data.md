@@ -24,7 +24,7 @@ The sign method computes a signature with:
 
 `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`
 
-The added prefix prevents a malicious DApp can sign arbitrary data (e.g. transaction) and use the signature to impersonate the victim.
+The added prefix prevents malicious DApps from signing arbitrary data (e.g. transaction) and then using the signature to impersonate the victim.
 
 Note the address to sign with must be connected to the Dapp. If the wallet is locked it will ask to be unlocked first.
 
@@ -57,7 +57,7 @@ The sign method computes a signature with:
 
 `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`
 
-The added prefix prevents a malicious DApp can sign arbitrary data (e.g. transaction) and use the signature to impersonate the victim.
+The added prefix prevents malicious DApps from signing arbitrary data (e.g. transaction) and then using the signature to impersonate the victim.
 
 Note the address to sign with must be connected to the Dapp. If the wallet is locked it will ask to be unlocked first.
 
