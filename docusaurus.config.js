@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Brave Wallet',
   tagline: '',
-  url: 'https://brave.com',
-  baseUrl: '/brave-wallet-docs/',
+  url: 'https://wallet-docs.brave.com',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
