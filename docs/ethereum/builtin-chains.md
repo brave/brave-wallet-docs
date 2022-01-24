@@ -10,5 +10,6 @@ Brave preloads the following chains by default.
 | ----------- | -------------------- | --------------- |
 | 0x1         | Ethereum Mainnet     | ETH             |
 | 0x3         | Ropsten Testnet      | ETH             |
-| 0x5         | Rinkeby Testnet      | ETH             |
+| 0x4         | Rinkeby Testnet      | ETH             |
+| 0x5         | Görli Testnet        | ETH             |
 | 0x2a        | Kovan Testnet        | ETH             |
