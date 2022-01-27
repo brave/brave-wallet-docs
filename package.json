@@ -1,6 +1,7 @@
 {
   "name": "brave-wallet-docs",
-  "version": "0.0.0",
+  "homepage": "https://wallet-docs.brave.com/",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -55,5 +56,20 @@
     "node-fetch": "3.2.0",
     "node-forge": "1.2.1",
     "postcss": "8.4.5"
+  },
+  "description": "The Brave Wallet documentation website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.",
+  "main": "babel.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brave/brave-wallet-docs.git"
+  },
+  "author": "Brave Software",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/brave/brave-wallet-docs/issues"
   }
 }

@@ -1,5 +1,7 @@
 # Website
 
+View the live Brave Wallet documentation site at https://wallet-docs.brave.com/
+
 The Brave Wallet documentation website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
