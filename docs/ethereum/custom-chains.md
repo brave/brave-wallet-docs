@@ -44,3 +44,4 @@ Other chains can be added to Brave through a site like
 | 0x89        | Polygon Mainnet      | MATIC           | 18       | <Add decimals={18} chainId='0x89' symbol='MATIC' chainName='Polygon' rpcUrl='https://polygon-rpc.com/' blockExplorerUrl='https://polygonscan.com/' /> |
 | 0xA86A      | Avalanche Mainnet    | AVAX            | 18       | <Add decimals={18} chainId='0xA86A' symbol='AVAX' chainName='Avalanche' rpcUrl='https://api.avax.network/ext/bc/C/rpc' blockExplorerUrl='https://snowtrace.io/' /> |
 | 0x38        | Binance Smart Chain  | BNB             | 18       | <Add decimals={18} chainId='0x38' symbol='BNB' chainName='Binance Smart Chain' rpcUrl='https://bsc-dataseed1.binance.org' blockExplorerUrl='https://bscscan.com' /> |
+| 0xA4B1      | Arbitrum One         | AETH            | 18       | <Add decimals={18} chainId='0xA4B1' symbol='AETH' chainName='Arbitrum One' rpcUrl='https://arb1.arbitrum.io/rpc' blockExplorerUrl='https://arbiscan.io' /> |
