@@ -5268,10 +5268,10 @@ node-emoji@^1.10.0:
   dependencies:
     lodash "^4.17.21"
 
-node-fetch@2.6.1, node-fetch@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-3.2.0.tgz"
-  integrity sha512-8xeimMwMItMw8hRrOl3C9/xzU49HV/yE6ORew/l+dxWimO5A4Ra8ld2rerlJvc/O7et5Z1zrWsPX43v1QBjCxw==
+node-fetch@2.6.1, node-fetch@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-3.2.1.tgz"
+  integrity sha512-Ef3SPFtRWFCDyhvcwCSvacLpkwmYZcD57mmZzAsMiks9TpHpIghe32U9H06tMICnr+X7YCpzH7WvUlUoml2urA==
   dependencies:
     data-uri-to-buffer "^4.0.0"
     fetch-blob "^3.1.4"
