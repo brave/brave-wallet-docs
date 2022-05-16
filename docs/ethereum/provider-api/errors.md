@@ -14,4 +14,4 @@ interface ProviderRpcError extends Error {
 }
 ```
 
-For a full list of errors, ee [EIP-1474](https://eips.ethereum.org/EIPS/eip-1474#error-codes)
+For a full list of errors, see [EIP-1474](https://eips.ethereum.org/EIPS/eip-1474#error-codes).

@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Adding EVM compatible chains
 
-Websites can request that alternate chains be added by using:
+Websites can request that alternate chains be added by using the `wallet_addEthereumChain` method.
 
 ```js
 async function addEthereumChain() {
@@ -25,4 +25,4 @@ async function addEthereumChain() {
 console.log(await addEthereumChain());
 ```
 
-After a chain is added, a switch request is shown to the user to switch to that site as well.
+After a chain is added, a switch request is shown to the user to switch to the new chain.
