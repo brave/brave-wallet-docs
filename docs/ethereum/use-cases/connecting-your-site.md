@@ -26,10 +26,10 @@ For those allowed accounts, the website will be able to see the corresponding ac
 The website will also be able to ask the user to approve (sing / send) transactions and to sign data.
 Signing transactions and messages require separate user confirmations after the initial account approval.
 
-Permissions can be revoked in [brave://settings/content/ethereum](brave://settings/content/ethereum).
+Permissions can be revoked in `brave://settings/content/ethereum`.
 A user can also open up the wallet panel and disconnect a connected site when they are on that site.
 
-If a wallet is not yet setup and a page requests permissions, Brave opens [brave://wallet](brave://wallet) for the user to setup the wallet.
+If a wallet is not yet setup and a page requests permissions, Brave opens `brave://wallet` for the user to setup the wallet.
 
 # Brave logos
 

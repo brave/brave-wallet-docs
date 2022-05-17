@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Dapps work by communicating with a special object that Brave Wallet and extensions like MetaMask provide named `window.ethereum`.
 Only one wallet can provide `window.ethereum` to websites.
-In Brave, we expose a setting in [brave://settings/wallet](brave://settings/wallet) to be able to change which wallet provides `window.ethereum`.
+In Brave, we expose a setting in `brave://settings/wallet` to be able to change which wallet provides `window.ethereum`.
 
 Here's a description of each setting:
 - Brave Wallet (Prefer extensions) - This is the default. Brave Wallet will expose `window.ethereum` but allow other extensions such as MetaMask to overwrite it.
