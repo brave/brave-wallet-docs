@@ -19,3 +19,10 @@ const isBraveWallet = await window.ethereum.request({
   })
 console.log('Brave Wallet: ', isBraveWallet)
 ```
+
+
+Simplified detection (currently only available in Brave Browser Beta):
+
+```js
+const isBraveWallet = window.ethereum.isBraveWallet
+```
