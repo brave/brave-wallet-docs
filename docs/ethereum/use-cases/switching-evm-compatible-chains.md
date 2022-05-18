@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Switching to EVM compatible chains
 
-Websites can request that the browser changes to a different chain by using `wallet_switchEthereumChain`
+Websites can request that the browser changes to a different chain by using the `wallet_switchEthereumChain` method.
 
 ```js
 async function switchEthereumChain(chainId) {

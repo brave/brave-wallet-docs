@@ -8,10 +8,10 @@ slug: /ethereum
 Brave injects a `windows.ethereum` provider object on all pages.  
 This object is defined by [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193).
 
-The in page provider will not be provided by Brave in private and Tor window.
+The in-page provider will not be provided by Brave in private and Tor window.
 
 This object gives websites the ability to:
 - Make requests to an Ethereum node (or a compatible network) to read data from the blockchain
-- Request permission to 1 or more Ethereum accounts
+- Request permission to view the addresses associated with one or more of the Ethereum accounts in the user's wallet
 - Ask the user (if given permission previously) to sign / submit a transaction
 - Ask the user (if given permission previously) to sign a message
