@@ -4,11 +4,22 @@ sidebar_position: 4
 
 # Brave Wallet detection
 
-We recommend that Dapps use a Brave Wallet button and that they treat Brave Wallet like MetaMask.
+We recommend that Dapps use a Brave Wallet button and that they treat Brave Wallet like MetaMask. 
+
+[Web3Modal](https://github.com/Web3Modal/web3modal) is a useful library for handling this for you.
 
 ## Compatability with MetaMask
 
 Since Brave Wallet aims to be compatible with MetaMask's exposed API, we set `window.ethereum.isMetaMask` to `true`.
+
+## Brave Wallet Provider injection & detection via library
+
+Check out these open-source libraries for off-the-shelf solutions
+
+- [Web3Modal](https://github.com/Web3Modal/web3modal)
+- [Web3-Onboard](https://github.com/blocknative/web3-onboard)
+- [wagmi](https://github.com/tmm/wagmi)
+
 
 ## Synchronous detection
 
