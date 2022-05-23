@@ -21,7 +21,7 @@ jobs:
         set -eu -o pipefail
         yarn
         yarn build
-        yarn deploy
+        GIT_USER=brave-builds yarn deploy
     # - name: Deploy
     #   uses: peaceiris/actions-gh-pages@v3
     #   if: ${{ github.ref == 'refs/heads/main' }}
