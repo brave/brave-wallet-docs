@@ -1,0 +1,20 @@
+name: Build and Deploy Docs
+
+on:
+  pull_request:
+
+jobs:
+  build-publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Build
+      run: |
+        set -eu -o pipefail
+        yarn
+        yarn build
+
+# yarn
+# yarn build
+# GIT_USER=brave-builds USE_SSH=true yarn deploy
