@@ -52,7 +52,8 @@ solana.disconnect() : Promis<undefined>
 This API will sign the transaction with private key of the selected account and
 submit it using Solana JSON RPC. It takes a
 [solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html)
-and return a promise containing a public key and a signature.
+and an optional [solanaWeb3.SendOptions](https://solana-labs.github.io/solana-web3.js/modules.html#SendOptions) parameter
+, and return a promise containing a public key and a signature.
 
 ```ts
 solana.signAndSendTransaction(solanaWeb3.Transaction)
@@ -65,7 +66,9 @@ const NETWORK = clusterApiUrl("testnet");
 const connection = new Connection(NETWORK);
 const transaction = new Transaction();
 try {
-  const result = await window.solana.signAndSendTransaction(transaction);
+  const result = await window.solana.signAndSendTransaction(transaction,
+      {maxRetries: 5, preflightCommitment: 'finalized', skipPreflight: false} // optional
+      );
   // BrG44HdsEhzapvs8bEqzvkq4egwevS3fRE6ze2ENo6S8
   console.log(result.publicKey);
   await connection.confirmTransaction(result.signature);
@@ -189,6 +192,7 @@ solana.request({ method: "disconnect" }) : Promise<{}>
 ### `signAndSendTransaction`
 `params` is required and websites must specify base58 encode of
 `serializeMessage` of [solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html).
+Optional `options` of type [solanaWeb3.SendOptions](https://solana-labs.github.io/solana-web3.js/modules.html#SendOptions) can be specified in `param`.
 `signature` in return promise is base58 encoded signature, it is also the
 confirmed block hash.
 
@@ -208,7 +212,8 @@ try {
   const result = await window.solana.request({
     method: "signAndSendTransaction",
     params: {
-      message: bs58.encode(transaction.serializeMessage())
+      message: bs58.encode(transaction.serializeMessage()),
+      options: {maxRetries: 5, preflightCommitment: 'finalized', skipPreflight: false}  // optional
     }
   });
   // BrG44HdsEhzapvs8bEqzvkq4egwevS3fRE6ze2ENo6S8
