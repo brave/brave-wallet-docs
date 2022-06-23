@@ -14,7 +14,11 @@ content settings. Note that having granted permission doesn't mean a dApp
 is connected, a website still need to call `solana.connect` when disconnected.
 
 ```ts
-solana.connect() : Promise<solanaWeb3.PublicKey>
+interface ConnectOptions {
+  // Eagerly connect
+  onlyIfTrusted?: boolean
+}
+solana.connect(options?: ConnectOptions) : Promise<solanaWeb3.PublicKey>
 ```
 
 When a connect succeeds,
@@ -56,7 +60,16 @@ and an optional [solanaWeb3.SendOptions](https://solana-labs.github.io/solana-we
 , and return a promise containing a public key and a signature.
 
 ```ts
-solana.signAndSendTransaction(solanaWeb3.Transaction)
+interface SendOptions = {
+  /** disable transaction verification step */
+  skipPreflight?: boolean,
+  /** preflight commitment level */
+  preflightCommitment?: string, // 'processed' | 'confirmed' | 'finalized'
+  /** Maximum number of times for the RPC node to retry sending the
+    transaction to the leader. */
+  maxRetries?: number;
+}
+solana.signAndSendTransaction(solanaWeb3.Transaction, options?: SendOptions)
  : Promise<{publicKey: <base58 encoded string>,
             signature: <base58 encoded string>}>
 ```
