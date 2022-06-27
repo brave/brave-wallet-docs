@@ -4,21 +4,25 @@ sidebar_position: 2
 
 # Methods
 
-## `solana.connect`
+## Compatibility
+`window.solana` is an alias of `window.braveSolana` which should be used mainly.
 
-`solana.connect` is required before calling other methods. First time calling
+
+## `braveSolana.connect`
+
+`braveSolana.connect` is required before calling other methods. First time calling
 connect will prompt users to grant permission for current selected account and
 the permission will be stored in `brave://settings/content/solana`. Subsequent
 calls won't ask for permission again if granted permission is still in
 content settings. Note that having granted permission doesn't mean a dApp
-is connected, a website still need to call `solana.connect` when disconnected.
+is connected, a website still need to call `braveSolana.connect` when disconnected.
 
 ```ts
 interface ConnectOptions {
   // Eagerly connect
   onlyIfTrusted?: boolean
 }
-solana.connect(options?: ConnectOptions) : Promise<solanaWeb3.PublicKey>
+braveSolana.connect(options?: ConnectOptions) : Promise<solanaWeb3.PublicKey>
 ```
 
 When a connect succeeds,
@@ -27,7 +31,7 @@ object will be returned, otherwise the promise will be rejected with error.
 
 Example:
 ```ts
-const result = await window.solana.connect();
+const result = await window.braveSolana.connect();
 // BrG44HdsEhzapvs8bEqzvkq4egwevS3fRE6ze2ENo6S8
 console.log(result.publicKey.ToString());
 ```
@@ -35,23 +39,23 @@ console.log(result.publicKey.ToString());
 ### Eagerly connect
 ```ts
 // eagerly connect
-solana.connect({ onlyIfTrusted: true }) : Promise<solanaWeb3.PublicKey>
+braveSolana.connect({ onlyIfTrusted: true }) : Promise<solanaWeb3.PublicKey>
 ```
 When an optional `{ onlyIfTrusted: true }` is provided, that means a website
 wants to eagerly connect, which means connect request will be rejected
 automatically when it doesn't have previously granted permission or the wallet
 is locked.
 
-## `solana.disconnect`
+## `braveSolana.disconnect`
 
-`solana.disconnect` will set state of the site to be disconnected for the
+`braveSolana.disconnect` will set state of the site to be disconnected for the
 selected account. Note that it won't remove the granted permission in content
 settings.
 ```ts
-solana.disconnect() : Promis<undefined>
+braveSolana.disconnect() : Promis<undefined>
 ```
 
-## `solana.signAndSendTransaction`
+## `braveSolana.signAndSendTransaction`
 
 This API will sign the transaction with private key of the selected account and
 submit it using Solana JSON RPC. It takes a
@@ -69,7 +73,7 @@ interface SendOptions = {
     transaction to the leader. */
   maxRetries?: number;
 }
-solana.signAndSendTransaction(solanaWeb3.Transaction, options?: SendOptions)
+braveSolana.signAndSendTransaction(solanaWeb3.Transaction, options?: SendOptions)
  : Promise<{publicKey: <base58 encoded string>,
             signature: <base58 encoded string>}>
 ```
@@ -79,7 +83,7 @@ const NETWORK = clusterApiUrl("testnet");
 const connection = new Connection(NETWORK);
 const transaction = new Transaction();
 try {
-  const result = await window.solana.signAndSendTransaction(transaction,
+  const result = await window.braveSolana.signAndSendTransaction(transaction,
       {maxRetries: 5, preflightCommitment: 'finalized', skipPreflight: false} // optional
       );
   // BrG44HdsEhzapvs8bEqzvkq4egwevS3fRE6ze2ENo6S8
@@ -90,7 +94,7 @@ try {
 }
 ```
 
-## `solana.signTransaction` (deprecated)
+## `braveSolana.signTransaction` (deprecated)
 
 This API allows a website to sign a transaction and submit it later.
 It takes a
@@ -99,7 +103,7 @@ and return a promise containing a
 [solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html)
 
 ```ts
-solana.signTransaction(solanaWeb3.Transaction) : Promise<solanaWeb3.Transaction>
+braveSolana.signTransaction(solanaWeb3.Transaction) : Promise<solanaWeb3.Transaction>
 ```
 Example:
 ```ts
@@ -107,7 +111,7 @@ const NETWORK = clusterApiUrl("testnet");
 const connection = new Connection(NETWORK);
 const transaction = new Transaction();
 try {
-  const signedTransaction = await window.solana.signTransaction(transaction);
+  const signedTransaction = await window.braveSolana.signTransaction(transaction);
   const signature = await connection.sendRawTransaction(signedTransaction.serialize());
 } catch (err) {
   // { code: 4001, message: 'User rejected the request.' }
@@ -120,7 +124,7 @@ This API is deprecated but is available in Brave Wallet.
 
 :::
 
-## `solana.signAllTransactions` (deprecated)
+## `braveSolana.signAllTransactions` (deprecated)
 
 This API allows a website to sign some transactions and submit them later.
 It takes an array of
@@ -129,7 +133,7 @@ and return a promise containing an array of
 [solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html)
 
 ```ts
-solana.signTransaction(solanaWeb3.Transaction[]) : Promise<solanaWeb3.Transaction[]>
+braveSolana.signTransaction(solanaWeb3.Transaction[]) : Promise<solanaWeb3.Transaction[]>
 ```
 Example:
 ```ts
@@ -138,7 +142,7 @@ const connection = new Connection(NETWORK);
 const transaction1 = new Transaction();
 const transaction2 = new Transaction();
 try {
-  const signedTransactions = await window.solana.signTransaction([transaction1, transaction2]);
+  const signedTransactions = await window.braveSolana.signTransaction([transaction1, transaction2]);
   signedTransactions.forEach(signedTransaction => {
     const signature = await connection.sendRawTransaction(signedTransaction.serialize())});
 } catch (err) {
@@ -151,7 +155,7 @@ This API is deprecated but is available in Brave Wallet.
 
 :::
 
-## `solana.signMessage`
+## `braveSolana.signMessage`
 
 Allows a website to sign a message using the selected account. If we detect the
 message payload to be signed is a transaction, we will reject the request
@@ -161,7 +165,7 @@ display the message to users. If a caller doesn't specify encoding, default
 would be utf8.
 
 ```ts
-solana.signMessage(Uint8Array, string?) : Promise({ publicKey: <solanaWeb3.PublicKey>,
+braveSolana.signMessage(Uint8Array, string?) : Promise({ publicKey: <solanaWeb3.PublicKey>,
                                                     signature: <Uint8Array> })
  ```
 
@@ -169,19 +173,19 @@ solana.signMessage(Uint8Array, string?) : Promise({ publicKey: <solanaWeb3.Publi
  ```ts
  const encodedMessage = new TextEncoder().encode('signMessage test');
  // signedMessage1 === signedMessage2 === signedMessage3
- const signedMessage1 = await window.solana.signMessage(encodedMessage);
- const signedMessage2 = await window.solana.signMessage(encodedMessage, "utf8");
- const signedMessage2 = await window.solana.signMessage(encodedMessage, "hex");
+ const signedMessage1 = await window.braveSolana.signMessage(encodedMessage);
+ const signedMessage2 = await window.braveSolana.signMessage(encodedMessage, "utf8");
+ const signedMessage2 = await window.braveSolana.signMessage(encodedMessage, "hex");
  ```
 
-## `solana.request`
+## `braveSolana.request`
 
 The `request` API allow a website to call above methods with a universal
 interface. Note input and output might be different for some methods,
 ex. signTransaction.
 
 ```ts
-solana.request({ method: <string>,
+braveSolana.request({ method: <string>,
                  parms: {...}}) : Promise<{...}>
 ```
 
@@ -189,17 +193,17 @@ solana.request({ method: <string>,
 `params` is optional for connect.
 
 ```ts
-solana.request({ method: "connect" })
+braveSolana.request({ method: "connect" })
  : Promise<{ publicKey: solanaWeb3.PublicKey}>
 // eagerly connect
-solana.request({ method: "connect", params: { onlyIfTrusted : true }})
+braveSolana.request({ method: "connect", params: { onlyIfTrusted : true }})
  : Promise<{ publicKey: solanaWeb3.PublicKey}>
 ```
 
 ### `disconnect`
 disconnect does not need `params`
 ```ts
-solana.request({ method: "disconnect" }) : Promise<{}>
+braveSolana.request({ method: "disconnect" }) : Promise<{}>
 ```
 
 ### `signAndSendTransaction`
@@ -210,7 +214,7 @@ Optional `options` of type [solanaWeb3.SendOptions](https://solana-labs.github.i
 confirmed block hash.
 
 ```ts
-solana.request({method: "signAndSendTransaction",
+braveSolana.request({method: "signAndSendTransaction",
                 params: { message: <base58 encoded string> }})
  : Promise<{ publicKey: <base58 encoded string>,
              signature: <base58 encoded string>}>
@@ -222,7 +226,7 @@ const NETWORK = clusterApiUrl("testnet");
 const connection = new Connection(NETWORK);
 const transaction = new Transaction();
 try {
-  const result = await window.solana.request({
+  const result = await window.braveSolana.request({
     method: "signAndSendTransaction",
     params: {
       message: bs58.encode(transaction.serializeMessage()),
@@ -243,7 +247,7 @@ try {
 `signature` in return promise is base58 encoded signature.
 
 ```ts
-solana.request({method: "signTransaction",
+braveSolana.request({method: "signTransaction",
                 params: { message: <base58 encoded string> }})
  : Promise<{ publicKey: <base58 encoded string>,
              signature: <base58 encoded string> }>
@@ -255,7 +259,7 @@ const NETWORK = clusterApiUrl("testnet");
 const connection = new Connection(NETWORK);
 const transaction = new Transaction();
 try {
-  const signedTransaction = await window.solana.request({
+  const signedTransaction = await window.braveSolana.request({
     method: "signTransaction"
     params: { message: bs58.encode(transaction.serializeMessage()) }
   });
@@ -278,7 +282,7 @@ Note that all of the transacion must be the same signer, otherwise request will
 be rejected.
 
 ```ts
-solana.request({method: "signAllTransactions",
+braveSolana.request({method: "signAllTransactions",
                 params: { message: <base58 encoded string>[] }})
  : Promise<{ publicKey: <base58 encoded string>,
              signature: <base58 encoded string>[] }>
@@ -295,7 +299,7 @@ const message = transactions.map((transaction) => {
     return bs58.encode(transaction.serializeMessage());
 });
 try {
-  const signedTransactions = await window.solana.request({
+  const signedTransactions = await window.braveSolana.request({
     method: "signAllTransactions"
     params: { message }
   })
@@ -319,7 +323,7 @@ it only accepts **hex** or **utf8**  (default: **utf8**).
 `signature` in returned promise is base58 encoded of signature byte array.
 
 ```ts
-solana.request({method: "signMessage",
+braveSolana.request({method: "signMessage",
                 params: { message: Uint8Array, params?: <string> }})
  : Promise<{ publicKey: <base58 encoded string>,
              signature: <base58 encoded string> }>
@@ -327,15 +331,15 @@ solana.request({method: "signMessage",
 ```ts
  const encodedMessage = new TextEncoder().encode('signMessage test')
  // signedMessage1 === signedMessage2 === signedMessage3
- const signedMessage1 = await window.solana.request({
+ const signedMessage1 = await window.braveSolana.request({
    method: "signMessage",
    params: {message: encodedMessage}
   });
- const signedMessage2 = await window.solana.request({
+ const signedMessage2 = await window.braveSolana.request({
    method: "signMessage",
    params: {message: encodedMessage, display: "utf8"}
   });
- const signedMessage3 = await window.solana.request({
+ const signedMessage3 = await window.braveSolana.request({
    method: "signMessage",
    params: {message: encodedMessage, display: "hex"}
   });
