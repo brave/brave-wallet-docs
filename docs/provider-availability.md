@@ -10,6 +10,9 @@ Historically the web has had a notion of “powerful" APIs like geolocation and 
 Because they allow websites to request access to user funds, new web3 APIs like `window.ethereum` and `window.braveSolana` are subject to the same restrictions as other powerful APIs like `geolocation` in Brave.
 As a rule of thumb, if a context is not allowed to request access to geolocation, `window.ethereum` and `window.braveSolana` are `undefined` in the same contexts.
 
+Provider objects are not accessible in private and Tor window.
+
+
 ## Restrictions for insecure contexts
 
 Only “secure origins" as defined in https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features/#definitions have access to `window.ethereum` and `window.braveSolana`.

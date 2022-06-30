@@ -5,9 +5,7 @@ slug: /ethereum
 
 # Overview
 
-Brave injects a `windows.ethereum` provider object on all secure sites.
-Secure 1st party iframes will also have `window.ethereum` exposed but will work the same as other secure feature policies.
-For more information please see [this work](https://github.com/brave/brave-browser/issues/23710).
+Brave injects a `windows.ethereum` provider object on secure sites [in these cases](/provider-availability).
 
 This object is defined by [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193).
 
