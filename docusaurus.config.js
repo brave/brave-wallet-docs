@@ -41,7 +41,7 @@ const config = {
         title: 'Brave Wallet',
         logo: {
           alt: 'Brave Wallet Logo',
-          src: 'img/brave32.png',
+          src: 'img/brave128.png',
         },
         items: [
           /*
