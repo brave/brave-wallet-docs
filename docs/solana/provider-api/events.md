@@ -16,8 +16,8 @@ called.
 
 ## `accountChanged`
 
-The provider emits `accountChanged` when selected account changed
-1. If newly selected account is connected,
+The provider emits `accountChanged` when selected account changed.
+1. If selected account is connected,
    [solanaWeb3.PublicKey](https://solana-labs.github.io/solana-web3.js/classes/PublicKey.html)
-   will be emitted
-2. If newly selected account is disconnected, `null` will be emitted
+   will be emitted.
+2. If selected account is deleted or disconnected, `null` will be emitted.
