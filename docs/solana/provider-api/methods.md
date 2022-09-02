@@ -22,7 +22,7 @@ interface ConnectOptions {
   // Eagerly connect
   onlyIfTrusted?: boolean
 }
-braveSolana.connect(options?: ConnectOptions) : Promise<solanaWeb3.PublicKey>
+braveSolana.connect(options?: ConnectOptions) : Promise<{ publicKey: solanaWeb3.PublicKey }>
 ```
 
 When a connect succeeds,
@@ -39,7 +39,7 @@ console.log(result.publicKey.ToString());
 ### Eagerly connect
 ```ts
 // eagerly connect
-braveSolana.connect({ onlyIfTrusted: true }) : Promise<solanaWeb3.PublicKey>
+braveSolana.connect({ onlyIfTrusted: true }) : Promise<{ publicKey: solanaWeb3.PublicKey }>
 ```
 When an optional `{ onlyIfTrusted: true }` is provided, that means a website
 wants to eagerly connect, which means connect request will be rejected
