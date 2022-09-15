@@ -5,7 +5,7 @@ slug: /ethereum
 
 # Overview
 
-Brave injects a `windows.ethereum` provider object on secure sites [in these cases](/provider-availability).
+Brave injects a `window.ethereum` provider object on secure sites [in these cases](/provider-availability).
 
 This object is defined by [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193).
 
