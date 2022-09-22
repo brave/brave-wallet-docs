@@ -52,7 +52,7 @@ interface WatchAssetParameters {
 }
 ```
 
-## `eth_getEncryptionPublicKey`
+## `eth_getEncryptionPublicKey` (deprecated)
 
 Requests that the user shares their public encryption key. Returns a Promise that resolve to the public encryption key, or rejects if the user denied the request.
 
@@ -152,7 +152,7 @@ ethereum
 
 It will popup the UI to decrypt the message for the user. And if you press approve it will send it back to the Dapp. Check the JS console in dev tools to see.
 
-## `eth_decrypt`
+## `eth_decrypt` (deprecated)
 
 This method requests that Brave Wallet decrypts the given encrypted message.
 
