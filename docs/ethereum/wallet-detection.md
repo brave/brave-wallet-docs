@@ -21,7 +21,8 @@ Check out these open-source libraries for off-the-shelf solutions
 - [wagmi](https://github.com/tmm/wagmi)
 
 
-## Synchronous detection
+## Synchronous acep
+
 
 ```js
 const isBraveWallet = window.ethereum.isBraveWallet
