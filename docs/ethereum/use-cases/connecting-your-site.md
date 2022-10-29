@@ -23,7 +23,7 @@ to make a request for permissions to an account.
 The user is asked to confirm which, if any, of the wallet's accounts should be visible to the website.
 For those allowed accounts, the website will be able to see the corresponding account address.
 
-The website will also be able to ask the user to approve (sing / send) transactions and to sign data.
+The website will also be able to ask the user to approve (sign / send) transactions and to sign data.
 Signing transactions and messages require separate user confirmations after the initial account approval.
 
 Permissions can be revoked in `brave://settings/content/ethereum`.

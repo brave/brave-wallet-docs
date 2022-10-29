@@ -5,7 +5,8 @@ slug: /ethereum
 
 # Overview
 
-Brave injects a `windows.ethereum` provider object on all pages.  
+Brave injects a `window.ethereum` provider object on secure sites [in these cases](/provider-availability).
+
 This object is defined by [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193).
 
 The in-page provider will not be provided by Brave in private and Tor window.
