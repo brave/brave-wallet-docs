@@ -5,6 +5,13 @@ sidebar_position: 2
 # Methods
 
 ## `eth_sendTransaction`
+https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_sendtransaction
+
+## `eth_signTransaction`
+https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_signtransaction
+
+## `eth_sendRawTransaction`
+https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_sendrawtransaction
 
 ## `wallet_addEthereumChain`
 
