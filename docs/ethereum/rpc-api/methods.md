@@ -13,6 +13,23 @@ https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_signtransaction
 ## `eth_sendRawTransaction`
 https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_sendrawtransaction
 
+## `eth_subscribe`
+
+Allows for a new subscription to be created. When a subscription is created, `message` events will be fired with new block information.
+
+Unlike the [documentation here](https://ethereum.org/en/developers/tutorials/using-websockets/#eth-subscribe), you can use `eth_subscribe` even with an HTTPS RPC URLs configured in Brave Wallet.
+Only `newHeads` is currently supported.
+
+https://ethereum.org/en/developers/tutorials/using-websockets/#eth-subscribe
+
+
+## `eth_unsubscribe`
+
+Allows for a previous subscription to be removed.
+`message` events will stop being fired after a subscription is unsubscribed.
+
+https://ethereum.org/en/developers/tutorials/using-websockets/#eth-unsubscribe
+
 ## `wallet_addEthereumChain`
 
 `wallet_addEthereumChain` accepts a single object parameter, specified by the following TypeScript interface:

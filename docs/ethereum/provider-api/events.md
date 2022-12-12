@@ -47,9 +47,9 @@ Provider.on('accountsChanged', listener: (accounts: string[]) => void): Provider
 
 ## `message`
 
-Brave has not implemented this event yet.
+The `message` event is fired for `eth_subscribe` subscription results.
 
-The message event is intended for arbitrary notifications not covered by other events.
+Other types of events are possible in the future, so be sure to check the `type` property.
 
 The event will be emitted with an object argument of the following form:
 
@@ -77,17 +77,6 @@ This API is deprecated and not available in Brave Wallet.
 Not yet implemented, but Brave may implement it for webcompat reasons.
 
 The event `networkChanged` is superseded by `chainChanged`.
-
-:::danger Deprecated API
-
-This API is deprecated and not available in Brave Wallet.
-
-:::
-
-
-## `notification` (deprecated)
-
-This event is superseded by `message`.
 
 :::danger Deprecated API
 
