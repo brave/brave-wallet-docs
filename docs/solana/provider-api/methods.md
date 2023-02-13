@@ -52,7 +52,7 @@ is locked.
 selected account. Note that it won't remove the granted permission in content
 settings.
 ```ts
-braveSolana.disconnect() : Promis<undefined>
+braveSolana.disconnect() : Promise<undefined>
 ```
 
 ## `braveSolana.signAndSendTransaction`
