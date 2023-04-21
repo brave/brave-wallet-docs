@@ -47,6 +47,10 @@
       "last 1 safari version"
     ]
   },
+  "overrides": {
+    "got": "12.6.0",
+    "trim": "1.0.1"
+  },
   "resolutions": {
     "got": "12.6.0",
     "trim": "1.0.1",
