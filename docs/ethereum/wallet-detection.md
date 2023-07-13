@@ -8,7 +8,7 @@ We recommend that Dapps use a Brave Wallet button and that they treat Brave Wall
 
 [Web3Modal](https://github.com/Web3Modal/web3modal) is a useful library for handling this for you.
 
-## Compatability with MetaMask
+## Compatibility with MetaMask
 
 Since Brave Wallet aims to be compatible with MetaMask's exposed API, we set `window.ethereum.isMetaMask` to `true`.
 

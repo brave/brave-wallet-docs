@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Brave Wallet detection
 
-## Compatability with Phantom
+## Compatibility with Phantom
 
 Since Brave Wallet aims to be compatible with Phantom's exposed API, we set `window.braveSolana.isPhantom` to `true`.
 Also `window.solana` is an alias of `window.braveSolana`.

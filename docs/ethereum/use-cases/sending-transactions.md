@@ -51,7 +51,7 @@ For more information, see: https://eth.wiki/json-rpc/API#eth_sendtransaction
 ## eth_signTransaction and eth_sendRawTransaction
 
 Sites can request that a transaction be signed by `eth_signTransaction` method
-and send singed transaction later through `eth_sendRawTransaction` or other
+and send signed transaction later through `eth_sendRawTransaction` or other
 preferred methods.
 
 ```js
