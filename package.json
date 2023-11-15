@@ -17,6 +17,7 @@
   "dependencies": {
     "@docusaurus/core": "3.0.0",
     "@docusaurus/preset-classic": "3.0.0",
+    "@mdx-js/react": "3.0.0",
     "@svgr/webpack": "7.0.0",
     "clsx": "1.2.1",
     "file-loader": "6.2.0",
@@ -33,8 +34,7 @@
     "react-dom": "18.2.0",
     "shelljs": "0.8.5",
     "trim": "1.0.1",
-    "url-loader": "4.1.1",
-    "@mdx-js/react": "3.0.0"
+    "url-loader": "4.1.1"
   },
   "browserslist": {
     "production": [
@@ -72,7 +72,6 @@
   "directories": {
     "doc": "docs"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brave/brave-wallet-docs.git"
@@ -81,5 +80,6 @@
   "license": "MPL-2.0",
   "bugs": {
     "url": "https://github.com/brave/brave-wallet-docs/issues"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }
