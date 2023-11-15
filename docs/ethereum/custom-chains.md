@@ -1,39 +1,10 @@
+import AddChain from '../../src/components/AddChain'
+
 ---
 sidebar_position: 3
 ---
 
 # Custom chains
-
-export const Add = ({children, chainId, decimals, symbol, chainName, rpcUrl, blockExplorerUrl}) => (
-  <span
-    style={{
-      backgroundColor: '#737ADE',
-      borderRadius: '20px',
-      color: '#fff',
-      padding: '10px 20px',
-      cursor: 'pointer',
-    }}
-    onClick={() => {
-      const params = [{
-        chainId,
-        chainName,
-        nativeCurrency: {
-          name,
-          symbol,
-          decimals
-        },
-        rpcUrls: [rpcUrl],
-        iconUrls: [],
-        blockExplorerUrls: [ blockExplorerUrl ]
-      }]
-      window.ethereum.request({
-        method: 'wallet_addEthereumChain',
-        params
-      })
-    }}>
-    Add
-  </span>
-);
 
 You can add custom networks by navigating to `brave://settings/wallet/networks`
 and clicking on the "Add" button. You can enter the network details manually or
@@ -52,5 +23,5 @@ found below:
 
 | Chain ID    | Name                 | Native currency | Decimals | Add    |
 | ----------- | -------------------- | --------------- | -------- | ------ |
-| 0xa4b1      | Arbitrum One         | AETH            | 18       | <Add decimals={18} chainId='0xa4b1' symbol='AETH' chainName='Arbitrum One' rpcUrl='https://arb1.arbitrum.io/rpc' blockExplorerUrl='https://arbiscan.io' />
-| 0x2105      | Base                 | ETH             | 18       | <Add decimals={18} chainId='0x2105' symbol='ETH' chainName='Base' rpcUrl='https://mainnet.base.org' blockExplorerUrl='https://basescan.org' />
+| 0xa4b1      | Arbitrum One         | AETH            | 18       | <AddChain decimals={18} chainId='0xa4b1' symbol='AETH' chainName='Arbitrum One' rpcUrl='https://arb1.arbitrum.io/rpc' blockExplorerUrl='https://arbiscan.io' />
+| 0x2105      | Base                 | ETH             | 18       | <AddChain decimals={18} chainId='0x2105' symbol='ETH' chainName='Base' rpcUrl='https://mainnet.base.org' blockExplorerUrl='https://basescan.org' />

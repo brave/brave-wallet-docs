@@ -30,7 +30,7 @@ In addition:
 
 1. If the iframe is third party to the top-level origin, it will be blocked UNLESS the iframe has the `allow="{solana/ethereum}"` attribute (where “solana" and “ethereum" values control the corresponding API permissions). 
 2. If the iframe is first party to the top-level origin AND the `sandbox` attribute is set on the iframe, it will be blocked UNLESS `sandbox="allow-same-origin"` is set. Note "allow-same-origin"` does nothing if the iframe is third-party.
-3. For security-conscious users, we add a setting to block window.{ethereum,solana} in ALL iframes, regardless of origin or attributes. This matches the default behavior on iOS.
+3. For security-conscious users, we add a setting to block both `window.ethereum` and `window.solana` in ALL iframes, regardless of origin or attributes. This matches the default behavior on iOS.
 
 ### iOS
 Currently on iOS, `window.ethereum` and `window.braveSolana` are both undefined in all iframes.
