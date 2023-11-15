@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-#Properties
+# Properties
 
 ## Compatibility
 `window.solana` is an alias of `window.braveSolana` which should be used mainly.
