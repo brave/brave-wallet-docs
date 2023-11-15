@@ -1,8 +1,8 @@
-import AddChain from '../../src/components/AddChain'
-
 ---
 sidebar_position: 3
 ---
+
+import AddChain from '../../src/components/AddChain'
 
 # Custom chains
 
