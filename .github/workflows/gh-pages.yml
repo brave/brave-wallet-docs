@@ -25,6 +25,9 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
+      
+      - name: Audit dependencies
+        run: yarn audit
 
       - name: Build website
         run: yarn build
