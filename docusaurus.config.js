@@ -1,9 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Brave Wallet',
@@ -52,9 +49,21 @@ const config = {
             label: 'Intro',
           },
           */
-          {to: 'https://brave.com/download', label: 'Download', position: 'left'},
-          {to: 'https://twitter.com/brave', label: 'Twitter', position: 'left'},
-          {to: 'https://github.com/brave/brave-browser', label: 'Github', position: 'left'},
+          {
+            to: 'https://brave.com/download',
+            label: 'Download',
+            position: 'left',
+          },
+          {
+            to: 'https://twitter.com/brave',
+            label: 'Twitter',
+            position: 'left',
+          },
+          {
+            to: 'https://github.com/brave/brave-browser',
+            label: 'Github',
+            position: 'left',
+          },
           {
             href: 'https://github.com/brave/brave-wallet-docs',
             label: 'Docs GitHub',
@@ -98,10 +107,6 @@ const config = {
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Brave Software, Inc.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
       },
     }),
 };
