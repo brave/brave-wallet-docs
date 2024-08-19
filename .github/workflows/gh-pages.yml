@@ -21,16 +21,16 @@ jobs:
         uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d # v3.8.1
         with:
           node-version: 18.x
-          cache: yarn
+          cache: npm
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
       
       - name: Audit dependencies
-        run: yarn audit
+        run: npm audit
 
       - name: Build website
-        run: yarn build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847 # v3.9.3
