@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbrave_wallet_docs=self.webpackChunkbrave_wallet_docs||[]).push([[661],{1892:(e,s,r)=>{r.r(s),r.d(s,{default:()=>n});r(7294);var a=r(6010),c=r(1944),l=r(5281),t=r(8790),u=r(7961),d=r(5893);function n(e){return(0,d.jsx)(c.FG,{className:(0,a.Z)(l.k.wrapper.docsPages),children:(0,d.jsx)(u.Z,{children:(0,t.H)(e.route.routes)})})}}}]);
