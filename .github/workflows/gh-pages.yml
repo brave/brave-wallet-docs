@@ -27,6 +27,7 @@ jobs:
         run: npm install
       
       - name: Audit dependencies
+        if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'renovate[bot]' }}
         run: npm audit
 
       - name: Build website
