@@ -10,7 +10,7 @@ sidebar_position: 3
 
 ## `braveSolana.publicKey`
 
-It will return `null` when wallet is not connected, otherwise [solanaWeb3.PublicKey](https://solana-labs.github.io/solana-web3.js/classes/PublicKey.html)
+It will return `null` when wallet is not connected, otherwise [solanaWeb3.PublicKey](https://solana-labs.github.io/solana-web3.js/v1.x/classes/PublicKey.html)
 of selected account will be returned.
 
 ## `braveSolana.isConnected`
