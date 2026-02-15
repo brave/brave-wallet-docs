@@ -50,6 +50,11 @@ const config = {
           },
           */
           {
+            to: '/wallet',
+            label: 'Wallet Demo',
+            position: 'left',
+          },
+          {
             to: 'https://brave.com/download',
             label: 'Download',
             position: 'left',
