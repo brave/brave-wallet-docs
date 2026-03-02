@@ -1,4 +1,4 @@
-# Website
+0x4b0f1812e5df2a09796481ff14017e6005508003# Website
 
 View the live Brave Wallet documentation site at https://wallet-docs.brave.com/
 
