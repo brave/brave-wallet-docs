@@ -7,3 +7,4 @@ sidebar_position: 2
 Dapps work by communicating with a special object named a provider object exposed to websites.
 - For Ethereum that object is `window.ethereum`.
 - For Solana that object is `window.braveSolana` (`window.solana` is an alias).
+- For Cardano that object is `window.cardano.brave` (under the CIP-30 `window.cardano` namespace).
