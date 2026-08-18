@@ -8,6 +8,10 @@ sidebar_position: 1
 
 Per [CIP-30](https://cips.cardano.org/cip/CIP-30), each wallet implementing the standard creates a namespaced field under the shared `window.cardano` object. Brave Wallet uses the namespace `brave`, so the wallet object is available at `window.cardano.brave`.
 
+## No provider until a wallet is created
+
+Starting in Brave 1.95, `window.cardano` is not injected at all until the user has created a Brave Wallet, and a site has no way to prompt them to create one. A missing namespace therefore means "no wallet created yet", not "not Brave" — see [restrictions for providers](/provider-availability).
+
 ## Synchronous detection
 
 ```js

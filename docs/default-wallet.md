@@ -8,7 +8,9 @@ We expose a setting in `brave://settings/wallet` to control how Brave makes the 
 
 Since extensions sometimes also provide these objects, this setting will help decide which wallet handles these objects.
 
-Here's a description of each setting:
+Starting in Brave 1.95, this setting only takes effect once the user has created a Brave Wallet. Until then Brave injects no provider objects regardless of which option is selected — see [restrictions for providers](/provider-availability).
+
+Here's a description of each setting (each assumes a wallet has been created):
 - `Extensions (Brave Wallet fallback)` - This is the default. Brave Wallet will expose `window.ethereum` and `window.braveSolana` but allow other extensions such as MetaMask to overwrite it.
 - `Brave Wallet` - Exposes `window.ethereum` and `window.braveSolana` and prevents sites and extensions from changing them.
 - `Extensions (no fallback)` - `window.ethereum` and `window.braveSolana` will not be provided by Brave Wallet at all. If you have enabled an extension such as MetaMask, it is free to use the provider object.

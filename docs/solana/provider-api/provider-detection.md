@@ -9,10 +9,14 @@ sidebar_position: 1
 Since Brave Wallet aims to be compatible with Phantom's exposed API, we set `window.braveSolana.isPhantom` to `true`.
 Also `window.solana` is an alias of `window.braveSolana`.
 
+## No provider until a wallet is created
+
+Starting in Brave 1.95, `window.braveSolana` (and its `window.solana` alias) is `undefined` until the user has created a Brave Wallet, and a site has no way to prompt them to create one. A missing provider therefore means "no wallet created yet", not "not Brave" — see [restrictions for providers](/provider-availability).
+
 ## Synchronous detection
 
 ```js
-const isBraveWallet = window.braveSolana.isBraveWallet
+const isBraveWallet = window.braveSolana?.isBraveWallet === true
 console.log('Brave Wallet: ', isBraveWallet)
 ```
 
