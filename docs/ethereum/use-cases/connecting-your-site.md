@@ -29,7 +29,7 @@ Signing transactions and messages require separate user confirmations after the 
 Permissions can be revoked in `brave://settings/content/ethereum`.
 A user can also open up the wallet panel and disconnect a connected site when they are on that site.
 
-If a wallet is not yet setup and a page requests permissions, Brave opens `brave://wallet` for the user to setup the wallet.
+Starting in Brave 1.95, if a wallet is not yet setup then `window.ethereum` is `undefined`, so a site cannot request permissions at all and cannot prompt the user to set up the wallet. Sites should [detect the provider](/ethereum/wallet-detection) before calling it. Before Brave 1.95, requesting permissions without a wallet setup would open `brave://wallet` for the user to setup the wallet.
 
 # Brave logos
 

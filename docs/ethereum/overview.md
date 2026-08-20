@@ -5,7 +5,7 @@ slug: /ethereum
 
 # Overview
 
-Brave injects a `window.ethereum` provider object on secure sites [in these cases](/provider-availability).
+Brave injects a `window.ethereum` provider object on secure sites [in these cases](/provider-availability). Starting in Brave 1.95, this requires that the user has created a Brave Wallet.
 
 This object is defined by [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193).
 

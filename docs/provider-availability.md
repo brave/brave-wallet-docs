@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 
 # Restrictions for providers
-The provider objects (e.g. `window.ethereum` and `window.braveSolana`) are not provided in all contexts.
+The provider objects (e.g. `window.ethereum`, `window.braveSolana` and `window.cardano`) are not provided in all contexts.
 
 Historically the web has had a notion of “powerful" APIs like geolocation and camera/microphone, which are subject to additional security restrictions. See for instance https://www.w3.org/TR/secure-contexts/. 
 
@@ -12,6 +12,14 @@ As a rule of thumb, if a context is not allowed to request access to geolocation
 
 Provider objects are not accessible in private and Tor window.
 
+## Restrictions until a wallet is created
+
+Starting in **Brave 1.95**, no provider object is injected until the user has created a Brave Wallet.
+Until then `window.ethereum`, `window.braveEthereum`, `window.braveSolana`, `window.solana` and `window.cardano` are all `undefined`, and there is no way for a site to prompt the user to set up the wallet.
+
+Before Brave 1.95, `window.braveEthereum`, `window.braveSolana`, `window.solana` and `window.cardano` were injected even with no wallet created (as was `window.ethereum`, when no MetaMask was installed), and requesting permissions from a site would open the wallet onboarding page.
+
+This means detection code must tolerate a missing provider rather than assume one is present. See the detection pages for [Ethereum](/ethereum/wallet-detection), [Solana](/solana/provider-api/provider-detection) and [Cardano](/cardano/provider-api/provider-detection).
 
 ## Restrictions for insecure contexts
 

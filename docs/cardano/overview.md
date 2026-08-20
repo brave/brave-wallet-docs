@@ -7,7 +7,7 @@ slug: /cardano
 
 Brave Wallet implements the [Cardano dApp-Wallet Web Bridge (CIP-30)](https://cips.cardano.org/cip/CIP-30) specification, which defines a webpage-based communication bridge allowing dApps to interface with Cardano wallets.
 
-Brave injects a `window.cardano` provider object on secure sites [in these cases](/provider-availability). Under this namespace, Brave Wallet exposes its API at `cardano.brave`.
+Brave injects a `window.cardano` provider object on secure sites [in these cases](/provider-availability). Starting in Brave 1.95, this requires that the user has created a Brave Wallet. Under this namespace, Brave Wallet exposes its API at `cardano.brave`.
 
 This object gives websites the ability to:
 - Request user permission to connect and access wallet information
