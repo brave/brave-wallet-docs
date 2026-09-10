@@ -26,7 +26,7 @@ braveSolana.connect(options?: ConnectOptions) : Promise<{ publicKey: solanaWeb3.
 ```
 
 When a connect succeeds,
-[solanaWeb3.PublicKey](https://solana-labs.github.io/solana-web3.js/classes/PublicKey.html)
+[solanaWeb3.PublicKey](https://solana-labs.github.io/solana-web3.js/v1.x/classes/PublicKey.html)
 object will be returned, otherwise the promise will be rejected with error.
 
 Example:
@@ -59,8 +59,8 @@ braveSolana.disconnect() : Promise<undefined>
 
 This API will sign the transaction with private key of the selected account and
 submit it using Solana JSON RPC. It takes a
-[solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html)
-and an optional [solanaWeb3.SendOptions](https://solana-labs.github.io/solana-web3.js/modules.html#SendOptions) parameter
+[solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Transaction.html)
+and an optional [solanaWeb3.SendOptions](https://solana-labs.github.io/solana-web3.js/v1.x/modules.html#SendOptions) parameter
 , and return a promise containing a public key and a signature.
 
 ```ts
@@ -98,9 +98,9 @@ try {
 
 This API allows a website to sign a transaction and submit it later.
 It takes a
-[solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html)
+[solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Transaction.html)
 and return a promise containing a
-[solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html)
+[solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Transaction.html)
 
 ```ts
 braveSolana.signTransaction(solanaWeb3.Transaction) : Promise<solanaWeb3.Transaction>
@@ -128,9 +128,9 @@ This API is deprecated but is available in Brave Wallet.
 
 This API allows a website to sign some transactions and submit them later.
 It takes an array of
-[solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html)
+[solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Transaction.html)
 and return a promise containing an array of
-[solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html)
+[solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Transaction.html)
 
 ```ts
 braveSolana.signTransaction(solanaWeb3.Transaction[]) : Promise<solanaWeb3.Transaction[]>
@@ -208,8 +208,8 @@ braveSolana.request({ method: "disconnect" }) : Promise<{}>
 
 ### `signAndSendTransaction`
 `params` is required and websites must specify base58 encode of
-`serializeMessage` of [solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html).
-Optional `options` of type [solanaWeb3.SendOptions](https://solana-labs.github.io/solana-web3.js/modules.html#SendOptions) can be specified in `param`.
+`serializeMessage` of [solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Transaction.html).
+Optional `options` of type [solanaWeb3.SendOptions](https://solana-labs.github.io/solana-web3.js/v1.x/modules.html#SendOptions) can be specified in `param`.
 `signature` in return promise is base58 encoded signature, it is also the
 confirmed block hash.
 
@@ -243,7 +243,7 @@ try {
 
 ### `signTransaction` (deprecated)
 `params` is required and websites must specify base58 encode of
-`serializeMessage` of [solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html).
+`serializeMessage` of [solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Transaction.html).
 `signature` in return promise is base58 encoded signature.
 
 ```ts
@@ -276,7 +276,7 @@ This API is deprecated but is available in Brave Wallet.
 
 ### `signAllTransactions` (deprecated)
 `params` is required and websites must specify an array of base58 encode of
-`serializeMessage` of [solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/classes/Transaction.html).
+`serializeMessage` of [solanaWeb3.Transaction](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Transaction.html).
 `signature` in return promise is an array of base58 encoded signatures.
 Note that all of the transacion must be the same signer, otherwise request will
 be rejected.
