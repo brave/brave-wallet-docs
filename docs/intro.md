@@ -1,3 +1,6 @@
+[رونوشت 34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo.txt](https://github.com/user-attachments/files/16751613/34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo.txt)
+[coinbase_btcusd_trades_2019_10_04_75441f8422a0465a89b45d1d35234d.pdf](https://github.com/user-attachments/files/16751600/coinbase_btcusd_trades_2019_10_04_75441f8422a0465a89b45d1d35234d.pdf)
+[usd($)_of_revenue_transactions.csv](https://github.com/user-attachments/files/16751593/usd._of_revenue_transactions.csv)
 ---
 sidebar_position: 1
 slug: /
