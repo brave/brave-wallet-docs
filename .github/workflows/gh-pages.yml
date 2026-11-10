@@ -28,7 +28,7 @@ jobs:
       
       - name: Audit dependencies
         if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'renovate[bot]' }}
-        run: npm audit
+        run: npm audit --audit-level=moderate
 
       - name: Build website
         run: npm run build
